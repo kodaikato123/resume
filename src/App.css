@@ -1,38 +1,101 @@
-.App {
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.resume {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.header {
   text-align: center;
+  border-bottom: 2px solid #333;
+  padding-bottom: 20px;
+  background-color: #185a27; /* Green header background */
+  color: #fff; /* White text color */
+  border-radius: 10px 10px 0 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.job-title {
+  font-size: 1.2em;
+  margin-top: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.left-column, .right-column {
+  width: 50%;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.left-column h3, .right-column h3 {
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.left-column p, .right-column p {
+  margin: 5px 0;
+}
+
+.left-column .contact p a, .left-column .contact p a:visited {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.left-column .contact p a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.job h4, .project h4 {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.job p, .project p {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .left-column, .right-column {
+    width: 100%;
+    padding: 10px;
   }
 }
